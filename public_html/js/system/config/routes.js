@@ -81,6 +81,17 @@ trolleyes.config(['$routeProvider', function ($routeProvider) {
         //------------5
         $routeProvider.when('/usuario/5/view/:id', {templateUrl: 'js/system/shared/app/view.html', controller: 'UsuarioView5Controller', resolve: {auth: authenticationVisitantePromise}});
 
+
+
+        //perfil 1 tienda AUTOR
+        $routeProvider.when('/autor/1/view/:id', {templateUrl: 'js/system/shared/app/view.html', controller: 'AutorView1Controller', resolve: {auth: authenticationAdministratorPromise}});
+        $routeProvider.when('/autor/1/new/:id?', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'AutorNew1Controller', resolve: {auth: authenticationAdministratorPromise}});
+        $routeProvider.when('/autor/1/edit/:id', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'AutorEdit1Controller', resolve: {auth: authenticationAdministratorPromise}});
+        $routeProvider.when('/autor/1/remove/:id', {templateUrl: 'js/system/shared/app/remove.html', controller: 'AutorRemove1Controller', resolve: {auth: authenticationAdministratorPromise}});
+        $routeProvider.when('/autor/1/plist/:page?/:rpp?', {templateUrl: 'js/system/shared/app/plist.html', controller: 'AutorPList1Controller', resolve: {auth: authenticationAdministratorPromise}});
+       
+
+
         //------------
         $routeProvider.when('/tipousuario/1/view/:id', {templateUrl: 'js/system/shared/app/view.html', controller: 'TipousuarioView1Controller', resolve: {auth: authenticationAdministratorPromise}});
         $routeProvider.when('/tipousuario/1/new/:id?', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'TipousuarioNew1Controller', resolve: {auth: authenticationAdministratorPromise}});
