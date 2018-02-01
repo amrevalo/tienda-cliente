@@ -26,14 +26,14 @@
  * THE SOFTWARE.
  */
 'use strict';
-moduloFactura.controller('FacturaView1Controller',
+moduloLineapedido.controller('LineapedidoView1Controller',
         ['$scope', '$routeParams', 'serverCallService', '$location', 'sessionService', 'constantService',
             function ($scope, $routeParams, serverCallService, $location, sessionService, constantService) {
-                $scope.ob = "factura";
+                $scope.ob = "lineapedido";
                 $scope.op = "view";
                 $scope.profile = 1;
                 //---
-                $scope.id = $routeParams.id;
+                $scope.id = $routeParams.id;                
                 //---
                 $scope.url = $scope.ob + '/' + $scope.profile + '/' + $scope.op;
                 //---

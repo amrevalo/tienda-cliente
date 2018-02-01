@@ -26,10 +26,10 @@
  * THE SOFTWARE.
  */
 'use strict';
-moduloFactura.controller('FacturaView1Controller',
+moduloProdxproveedor.controller('ProdxproveedorView1Controller',
         ['$scope', '$routeParams', 'serverCallService', '$location', 'sessionService', 'constantService',
             function ($scope, $routeParams, serverCallService, $location, sessionService, constantService) {
-                $scope.ob = "factura";
+                $scope.ob = "prodxproveedor";
                 $scope.op = "view";
                 $scope.profile = 1;
                 //---

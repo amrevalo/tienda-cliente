@@ -28,10 +28,10 @@
 
 'use strict';
 
-moduloFactura.controller('FacturaSelection1Controller',
+moduloTipoproducto.controller('TipoproductoSelection1Controller',
         ['$scope', '$uibModalInstance', 'serverCallService', '$location', 'toolService',
             function ($scope, $modalInstance, serverCallService, $location, toolService) {
-                $scope.ob = 'factura';
+                $scope.ob = 'tipoproducto';
                 $scope.op = "selection";
                 //---
                 $scope.numpage = 1;
