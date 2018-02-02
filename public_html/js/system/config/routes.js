@@ -68,8 +68,11 @@ trolleyes.config(['$routeProvider', function ($routeProvider) {
         $routeProvider.when('/usuario/1/tipousuario/plistx/:id/:page?/:rpp?', {templateUrl: 'js/system/shared/app/plist.html', controller: 'UsuarioXtipousuarioPList1Controller', resolve: {auth: authenticationAdministratorPromise}});
         $routeProvider.when('/usuario/1/tipousuario/newx/:id', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'UsuarioXtipousuarioNew1Controller', resolve: {auth: authenticationAdministratorPromise}});
         $routeProvider.when('/usuario/1/tipousuario/editx/:id/:xid', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'UsuarioXtipousuarioEdit1Controller', resolve: {auth: authenticationAdministratorPromise}});
-        //------------4-5
-        $routeProvider.when('/usuario/4/view/:id', {templateUrl: 'js/system/shared/app/view.html', controller: 'UsuarioView4Controller', resolve: {auth: authenticationAlumnoPromise}});
+        //------------link a tipousuario
+            $routeProvider.when('/usuario/1/xtipousuario/plistx/:id/:page?/:rpp?', {templateUrl: 'js/system/shared/app/plist.html', controller: 'UsuarioXtipousuarioPList1Controller', resolve: {auth: authenticationAdministratorPromise}});
+            $routeProvider.when('/usuario/1/xtipousuario/newx/:id', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'UsuarioXtipousuarioNew1Controller', resolve: {auth: authenticationAdministratorPromise}});
+            $routeProvider.when('/usuario/1/xtipousuario/editx/:id/:xid', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'UsuarioXtipousuarioEdit1Controller', resolve: {auth: authenticationAdministratorPromise}});
+        
       
         //------------3
         $routeProvider.when('/usuario/3/view/:id', {templateUrl: 'js/system/shared/app/view.html', controller: 'UsuarioView3Controller', resolve: {auth: authenticationProfesorPromise}});
@@ -78,10 +81,9 @@ trolleyes.config(['$routeProvider', function ($routeProvider) {
         $routeProvider.when('/usuario/3/remove/:id', {templateUrl: 'js/system/shared/app/remove.html', controller: 'UsuarioRemove3Controller', resolve: {auth: authenticationProfesorPromise}});
         $routeProvider.when('/usuario/3/plist/:page?/:rpp?', {templateUrl: 'js/system/shared/app/plist.html', controller: 'UsuarioPList3Controller', resolve: {auth: authenticationProfesorPromise}});       
        
-    
-        //------------5
-        $routeProvider.when('/usuario/5/view/:id', {templateUrl: 'js/system/shared/app/view.html', controller: 'UsuarioView5Controller', resolve: {auth: authenticationVisitantePromise}});
 
+        
+            
 
 
         //perfil 1 tienda AUTOR
@@ -175,6 +177,10 @@ trolleyes.config(['$routeProvider', function ($routeProvider) {
         $routeProvider.when('/producto/1/edit/:id', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'ProductoEdit1Controller', resolve: {auth: authenticationAdministratorPromise}});
         $routeProvider.when('/producto/1/remove/:id', {templateUrl: 'js/system/shared/app/remove.html', controller: 'ProductoRemove1Controller', resolve: {auth: authenticationAdministratorPromise}});
         $routeProvider.when('/producto/1/plist/:page?/:rpp?', {templateUrl: 'js/system/shared/app/plist.html', controller: 'ProductoPList1Controller', resolve: {auth: authenticationAdministratorPromise}});
+            //perfil 1 tienda producto por usuario
+            $routeProvider.when('/producto/1/xusuario/plistx/:id/:page?/:rpp?', {templateUrl: 'js/system/shared/app/plist.html', controller: 'ProductoXusuarioPList1Controller', resolve: {auth: authenticationAdministratorPromise}});
+            $routeProvider.when('/producto/1/xusuario/newx/:id', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'ProductoXusuarioNew1Controller', resolve: {auth: authenticationAdministratorPromise}});
+            $routeProvider.when('/producto/1/xusuario/editx/:id/:xid', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'ProductoXusuarioEdit1Controller', resolve: {auth: authenticationAdministratorPromise}});
        
         
         //perfil 1 tienda FACTURA
