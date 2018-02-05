@@ -27,34 +27,41 @@
  */
 'use strict';
 
-moduloUsuario.controller('UsuarioNew1Controller',
+moduloPedido.controller('PedidoXfacturaEdit1Controller',
         ['$scope', '$routeParams', '$location', 'serverCallService', '$filter', '$uibModal', 'sessionService', '$route', 'toolService', 'constantService',
             function ($scope, $routeParams, $location, serverCallService, $filter, $uibModal, sessionService, $route, toolService, constantService) {
-                $scope.ob = "usuario";
-                $scope.op = "new";
+                $scope.ob = "pedido";
+                $scope.op = "editx";
                 $scope.profile = 1;
+                //----
+                $scope.id = $routeParams.id;
+                //---
+                $scope.xob = "factura";
+                $scope.xid = $routeParams.xid;
                 //---
                 $scope.status = null;
                 $scope.debugging = constantService.debugging();
-                $scope.url = $scope.ob + '/' + $scope.profile + '/' + $scope.op;
                 //---
-                serverCallService.getMeta($scope.ob).then(function (response) {
+                if ($scope.xob && $scope.xid) {
+                    $scope.linkedbean = null;
+                    serverCallService.getOne($scope.xob, $scope.xid).then(function (response) {
+                        if (response.status == 200) {
+                            if (response.data.status == 200) {
+                                $scope.linkedbean = response.data.json;
+                            }
+                        }
+                    }).catch(function (data) {
+                    });
+                }
+
+
+                serverCallService.getOne($scope.ob, $scope.id).then(function (response) {
                     if (response.status == 200) {
                         if (response.data.status == 200) {
                             $scope.status = null;
-                            //--For every foreign key create obj inside bean tobe filled...
-                            $scope.bean = {};
-                            response.data.json.metaProperties.forEach(function (property) {
-                                if (property.Type == 'ForeignObject') {
-                                    $scope.bean[property.Name] = {};
-                                    $scope.bean[property.Name].data = {};
-                                    $scope.bean[property.Name].data.id = null;
-                                }
-                            });
-                            //--
+                            $scope.bean = response.data.json.data;
                             $scope.metao = response.data.json.metaObject;
                             $scope.metap = response.data.json.metaProperties;
-
                         } else {
                             $scope.status = "Error en la recepción de datos del servidor";
                         }

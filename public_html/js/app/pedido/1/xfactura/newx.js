@@ -27,14 +27,14 @@
  */
 'use strict';
 
-moduloPedido.controller('PedidoXusuarioNew1Controller',
+moduloPedido.controller('PedidoXfacturaNew1Controller',
         ['$scope', '$routeParams', '$location', 'serverCallService', '$filter', '$uibModal', 'sessionService', '$route', 'toolService', 'constantService',
             function ($scope, $routeParams, $location, serverCallService, $filter, $uibModal, sessionService, $route, toolService, constantService) {
                 $scope.ob = "pedido";
                 $scope.op = "newx";
                 $scope.profile = 1;
                 //---
-                $scope.xob = "usuario";
+                $scope.xob = "factura";
                 $scope.xid = $routeParams.id;
                 //---
                 $scope.status = null;
