@@ -66,6 +66,7 @@
                         <i class="fa fa-icon-list-alt"></i>Productos<span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu" role="menu">
+                        <li ng-class="{ 'active': mn.isActive('/producto/1/plist')}"><a href="producto/1/plist"> <i ng-class="mn.meta.producto.Icon"></i> {{mn.meta.producto.PluralDescription}}</a></li>
                         <li class="dropdown-header">Datos Específicos de los comics</li>
                         <li ng-class="{ 'active': mn.isActive('/autor/1/plist')}"><a href="autor/1/plist"> <i ng-class="mn.meta.autor.Icon"></i> {{mn.meta.autor.PluralDescription}}</a></li>
                         <li ng-class="{ 'active': mn.isActive('/genero/1/plist')}"><a href="genero/1/plist"> <i ng-class="mn.meta.genero.Icon"></i> {{mn.meta.genero.PluralDescription}}</a></li>
