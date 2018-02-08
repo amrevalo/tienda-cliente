@@ -104,12 +104,17 @@
                                      ng-class="{'has-error':(outerForm[oMetap.Name].$error.pattern && !outerForm[oMetap.Name].$pristine) ||
                                                              (outerForm[oMetap.Name].$error.required && !outerForm[oMetap.Name].$pristine)}">
                                     <label class="control-label col-sm-2" for="{{oMetap.Name}}">
-                                        
-                                        <input type="file" value="/datos/usuarios/alumnos/a022593391p/loco/" >
+                                        <span ng-if="oMetap.IsRequired">*</span>
+                                        {{oMetap.LongName}}
+
                                     </label>
                                     <div class="control col-md-{{oMetap.Width}}">
-                                        <input type="file" class="form-control" id="{{oMetap.Name}}">
+
                                         
+
+
+
+
                                         <span class="help-block" ng-if="!outerForm[oMetap.Name].$pristine && outerForm[oMetap.Name].$error.required">El campo es obligatorio</span>
                                         <span class="help-block" ng-if="!outerForm[oMetap.Name].$pristine && outerForm[oMetap.Name].$error.pattern">El campo no tiene formato adecuado: Introduzca {{oMetap.RegexHelp}}</span>
                                     </div>
