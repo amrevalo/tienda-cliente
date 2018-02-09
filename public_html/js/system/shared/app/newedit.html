@@ -109,7 +109,8 @@
 
                                     </label>
                                     <div class="control col-md-{{oMetap.Width}}">
-
+                                        <input type="file" name="file" id="file"/><br/><br/>
+                                        <input type="submit" value="upload file" /><br/>
                                         
 
 
@@ -253,3 +254,31 @@
         </div>
     </div>
 </div>
+
+<script>
+$(document).ready(function () {            
+            $("#uploadForm").submit(function () {
+                var form = document.getElementById('uploadForm');
+                $("#spinner").append('<img src="spinner.gif"></div>').fadeIn(1000);
+                oformData= new FormData(form);
+                oformData.append("id",4);
+                oformData.append("value","ajax...");
+                this.timer = setTimeout(function () {
+                    $.ajax({
+                        url: 'upload',
+                        processData: false,
+                        contentType: false,
+                        enctype: 'multipart/form-data',
+                        mimeType:"multipart/form-data",
+                        data: oformData,                         
+                        type: 'post',
+                        success: function (msg) {                            
+                            $("#spinner").empty().append(msg);
+                        }
+
+                    });
+                }, 200);
+                return false;
+            });
+        });
+</script>
