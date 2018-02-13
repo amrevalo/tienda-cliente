@@ -36,7 +36,8 @@ moduloProducto.controller('ProductoXautorPList1Controller',
                 $scope.xob = "autor";
                 $scope.xid = $routeParams.id;
                 //----
-                $scope.url = $scope.ob + '/' + $scope.profile + '/' + $scope.op + $scope.xob + '/' + $scope.xid;
+                //$scope.url = $scope.ob + '/' + $scope.profile + '/' + $scope.op + $scope.xob + '/' + $scope.xid;
+                $scope.url = $scope.ob + '/' + $scope.profile + '/xautor/' + $scope.op + '/' + $scope.xid;
                 //----
                 $scope.numpage = toolService.checkDefault(1, $routeParams.page);
                 $scope.rpp = toolService.checkDefault(10, $routeParams.rpp);

@@ -36,7 +36,8 @@ moduloProducto.controller('ProductoXtipoproductoPList1Controller',
                 $scope.xob = "tipoproducto";
                 $scope.xid = $routeParams.id;
                 //----
-                $scope.url = $scope.ob + '/' + $scope.profile + '/' + $scope.op + $scope.xob + '/' + $scope.xid;
+                //$scope.url = $scope.ob + '/' + $scope.profile + '/' + $scope.op + $scope.xob + '/' + $scope.xid;
+                $scope.url = $scope.ob + '/' + $scope.profile + '/xtipoproducto/' + $scope.op + '/' + $scope.xid;
                 //----
                 $scope.numpage = toolService.checkDefault(1, $routeParams.page);
                 $scope.rpp = toolService.checkDefault(10, $routeParams.rpp);
