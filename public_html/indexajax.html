@@ -6,27 +6,31 @@
     </head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script type="text/javascript">
-        $(document).ready(function () {            
+        $(document).ready(function () {
             $("#uploadForm").submit(function () {
-                //var form = document.getElementById('uploadForm');
+                var form = document.getElementById('uploadForm');
                 //$("#spinner").append('<img src="spinner.gif"></div>').fadeIn(1000);
-                //oformData= new FormData(form);
-                //oformData.append("id",4);
-                //oformData.append("value","ajax...");
+                oformData= new FormData(form);
+                oformData.append("id",4);
+                oformData.append("value","ajax...");
                 //this.timer = setTimeout(function () {
-                    $.ajax({
-                        url: 'http://127.0.0.1:8081/tienda/json',
-                        processData: false,
-                        contentType: false,
-                        enctype: 'multipart/form-data',
-                        mimeType:"multipart/form-data",
-                        data: oformData,                         
-                        type: 'post',
-                        success: function (msg) {                            
-                            $("#spinner").empty().append(msg);
-                        }
+                $.ajax({
+                    url: 'http://127.0.0.1:8081/tienda/json',
+                    type: 'post',
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    dataType: "json",
+                    processData: false,
+                    contentType: false,
+                    enctype: 'multipart/form-data',
+                    mimeType: "multipart/form-data",
+                    data: oformData,
+                    success: function (msg) {
+                        //$("#spinner").empty().append(msg);
+                    }
 
-                    });
+                });
                 //}, 200);
                 return false;
             });
