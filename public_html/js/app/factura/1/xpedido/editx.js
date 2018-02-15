@@ -27,16 +27,16 @@
  */
 'use strict';
 
-moduloPedido.controller('PedidoXfacturaEdit1Controller',
+moduloFactura.controller('FacturaXpedidoEdit1Controller',
         ['$scope', '$routeParams', '$location', 'serverCallService', '$filter', '$uibModal', 'sessionService', '$route', 'toolService', 'constantService',
             function ($scope, $routeParams, $location, serverCallService, $filter, $uibModal, sessionService, $route, toolService, constantService) {
-                $scope.ob = "pedido";
+                $scope.ob = "factura";
                 $scope.op = "editx";
                 $scope.profile = 1;
                 //----
                 $scope.id = $routeParams.id;
                 //---
-                $scope.xob = "factura";
+                $scope.xob = "pedido";
                 $scope.xid = $routeParams.xid;
                 //---
                 $scope.status = null;

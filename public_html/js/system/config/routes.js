@@ -63,8 +63,7 @@ trolleyes.config(['$routeProvider', function ($routeProvider) {
         $routeProvider.when('/usuario/1/new/:id?', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'UsuarioNew1Controller', resolve: {auth: authenticationAdministratorPromise}});
         $routeProvider.when('/usuario/1/edit/:id', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'UsuarioEdit1Controller', resolve: {auth: authenticationAdministratorPromise}});
         $routeProvider.when('/usuario/1/remove/:id', {templateUrl: 'js/system/shared/app/remove.html', controller: 'UsuarioRemove1Controller', resolve: {auth: authenticationAdministratorPromise}});
-        $routeProvider.when('/usuario/1/plist/:page?/:rpp?', {templateUrl: 'js/system/shared/app/plist.html', controller: 'UsuarioPList1Controller', resolve: {auth: authenticationAdministratorPromise}});
-        $routeProvider.when('/newalumno/9/:codigo', {templateUrl: 'js/app/usuario/9/newalumno.html', controller: 'UsuarioNewalumno9Controller', resolve: {auth: anyAuthenticationPromise}});
+        $routeProvider.when('/usuario/1/plist/:page?/:rpp?', {templateUrl: 'js/system/shared/app/plist.html', controller: 'UsuarioPList1Controller', resolve: {auth: authenticationAdministratorPromise}});        
 //        $routeProvider.when('/usuario/1/tipousuario/plistx/:id/:page?/:rpp?', {templateUrl: 'js/system/shared/app/plist.html', controller: 'UsuarioXtipousuarioPList1Controller', resolve: {auth: authenticationAdministratorPromise}});
 //        $routeProvider.when('/usuario/1/tipousuario/newx/:id', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'UsuarioXtipousuarioNew1Controller', resolve: {auth: authenticationAdministratorPromise}});
 //        $routeProvider.when('/usuario/1/tipousuario/editx/:id/:xid', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'UsuarioXtipousuarioEdit1Controller', resolve: {auth: authenticationAdministratorPromise}});
@@ -74,17 +73,6 @@ trolleyes.config(['$routeProvider', function ($routeProvider) {
             $routeProvider.when('/usuario/1/xtipousuario/editx/:id/:xid', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'UsuarioXtipousuarioEdit1Controller', resolve: {auth: authenticationAdministratorPromise}});
         
       
-        //------------3
-        $routeProvider.when('/usuario/3/view/:id', {templateUrl: 'js/system/shared/app/view.html', controller: 'UsuarioView3Controller', resolve: {auth: authenticationProfesorPromise}});
-        $routeProvider.when('/usuario/3/new/:id?', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'UsuarioNew3Controller', resolve: {auth: authenticationProfesorPromise}});
-        $routeProvider.when('/usuario/3/edit/:id', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'UsuarioEdit3Controller', resolve: {auth: authenticationProfesorPromise}});
-        $routeProvider.when('/usuario/3/remove/:id', {templateUrl: 'js/system/shared/app/remove.html', controller: 'UsuarioRemove3Controller', resolve: {auth: authenticationProfesorPromise}});
-        $routeProvider.when('/usuario/3/plist/:page?/:rpp?', {templateUrl: 'js/system/shared/app/plist.html', controller: 'UsuarioPList3Controller', resolve: {auth: authenticationProfesorPromise}});       
-       
-
-        
-            
-
 
         //perfil 1 tienda AUTOR
         $routeProvider.when('/autor/1/view/:id', {templateUrl: 'js/system/shared/app/view.html', controller: 'AutorView1Controller', resolve: {auth: authenticationAdministratorPromise}});
@@ -131,10 +119,7 @@ trolleyes.config(['$routeProvider', function ($routeProvider) {
             $routeProvider.when('/lineapedido/1/xproducto/plistx/:id/:page?/:rpp?', {templateUrl: 'js/system/shared/app/plist.html', controller: 'LineapedidoXproductoPList1Controller', resolve: {auth: authenticationAdministratorPromise}});
             $routeProvider.when('/lineapedido/1/xproducto/newx/:id', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'LineapedidoXproductoNew1Controller', resolve: {auth: authenticationAdministratorPromise}});
             $routeProvider.when('/lineapedido/1/xproducto/editx/:id/:xid', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'LineapedidoXproductoEdit1Controller', resolve: {auth: authenticationAdministratorPromise}});
-            //perfil 1 tienda lineapedido por pedido
-            $routeProvider.when('/lineapedido/1/xpedido/plistx/:id/:page?/:rpp?', {templateUrl: 'js/system/shared/app/plist.html', controller: 'LineapedidoXpedidoPList1Controller', resolve: {auth: authenticationAdministratorPromise}});
-            $routeProvider.when('/lineapedido/1/xpedido/newx/:id', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'LineapedidoXpedidoNew1Controller', resolve: {auth: authenticationAdministratorPromise}});
-            $routeProvider.when('/lineapedido/1/xpedido/editx/:id/:xid', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'LineapedidoXpedidoEdit1Controller', resolve: {auth: authenticationAdministratorPromise}});
+            
        
         
         //perfil 1 tienda PRODXPROVEEDOR
@@ -185,11 +170,7 @@ trolleyes.config(['$routeProvider', function ($routeProvider) {
         $routeProvider.when('/pedido/1/new/:id?', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'PedidoNew1Controller', resolve: {auth: authenticationAdministratorPromise}});
         $routeProvider.when('/pedido/1/edit/:id', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'PedidoEdit1Controller', resolve: {auth: authenticationAdministratorPromise}});
         $routeProvider.when('/pedido/1/remove/:id', {templateUrl: 'js/system/shared/app/remove.html', controller: 'PedidoRemove1Controller', resolve: {auth: authenticationAdministratorPromise}});
-        $routeProvider.when('/pedido/1/plist/:page?/:rpp?', {templateUrl: 'js/system/shared/app/plist.html', controller: 'PedidoPList1Controller', resolve: {auth: authenticationAdministratorPromise}});
-            //perfil 1 tienda PEDIDO xfactura
-            $routeProvider.when('/pedido/1/xfactura/plistx/:id/:page?/:rpp?', {templateUrl: 'js/system/shared/app/plist.html', controller: 'PedidoXfacturaPList1Controller', resolve: {auth: authenticationAdministratorPromise}});
-            $routeProvider.when('/pedido/1/xfactura/newx/:id', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'PedidoXfacturaNew1Controller', resolve: {auth: authenticationAdministratorPromise}});
-            $routeProvider.when('/pedido/1/xfactura/editx/:id/:xid', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'PedidoXfacturaEdit1Controller', resolve: {auth: authenticationAdministratorPromise}});
+        $routeProvider.when('/pedido/1/plist/:page?/:rpp?', {templateUrl: 'js/system/shared/app/plist.html', controller: 'PedidoPList1Controller', resolve: {auth: authenticationAdministratorPromise}});            
             //perfil 1 tienda PEDIDO xcliente
             $routeProvider.when('/pedido/1/xcliente/plistx/:id/:page?/:rpp?', {templateUrl: 'js/system/shared/app/plist.html', controller: 'PedidoXclientePList1Controller', resolve: {auth: authenticationAdministratorPromise}});
             $routeProvider.when('/pedido/1/xcliente/newx/:id', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'PedidoXclienteNew1Controller', resolve: {auth: authenticationAdministratorPromise}});
@@ -224,7 +205,10 @@ trolleyes.config(['$routeProvider', function ($routeProvider) {
         $routeProvider.when('/factura/1/new/:id?', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'FacturaNew1Controller', resolve: {auth: authenticationAdministratorPromise}});
         $routeProvider.when('/factura/1/edit/:id', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'FacturaEdit1Controller', resolve: {auth: authenticationAdministratorPromise}});
         $routeProvider.when('/factura/1/remove/:id', {templateUrl: 'js/system/shared/app/remove.html', controller: 'FacturaRemove1Controller', resolve: {auth: authenticationAdministratorPromise}});
-
+        //perfil 1 tienda FACTURA xpedido
+            $routeProvider.when('/factura/1/xpedido/plistx/:id/:page?/:rpp?', {templateUrl: 'js/system/shared/app/plist.html', controller: 'FacturaXpedidoPList1Controller', resolve: {auth: authenticationAdministratorPromise}});
+            $routeProvider.when('/factura/1/xpedido/newx/:id', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'FacturaXpedidoNew1Controller', resolve: {auth: authenticationAdministratorPromise}});
+            $routeProvider.when('/factura/1/xpedido/editx/:id/:xid', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'FacturaXpedidoEdit1Controller', resolve: {auth: authenticationAdministratorPromise}});
        
          
          

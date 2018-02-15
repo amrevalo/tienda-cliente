@@ -26,14 +26,14 @@
  * THE SOFTWARE.
  */
 'use strict';
-moduloPedido.controller('PedidoXfacturaPList1Controller',
+moduloFactura.controller('FacturaXpedidoPList1Controller',
         ['$scope', '$routeParams', '$location', 'serverCallService', 'toolService', 'constantService',
             function ($scope, $routeParams, $location, serverCallService, toolService, constantService) {
-                $scope.ob = "pedido";
+                $scope.ob = "factura";
                 $scope.op = "plistx";
                 $scope.profile = 1;
                 //----
-                $scope.xob = "factura";
+                $scope.xob = "pedido";
                 $scope.xid = $routeParams.id;
                 //----
                 //$scope.url = $scope.ob + '/' + $scope.profile + '/' + $scope.op + $scope.xob + '/' + $scope.xid;
