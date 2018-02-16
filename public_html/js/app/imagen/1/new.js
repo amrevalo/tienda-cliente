@@ -37,8 +37,22 @@ moduloImagen.controller('ImagenNew1Controller',
                 $scope.status = null;
                 $scope.debugging = constantService.debugging();
                 $scope.url = $scope.ob + '/' + $scope.profile + '/' + $scope.op;
-                $scope.subida = "http://127.0.0.1:8081/images/";
+                
                 //---
+                var reinols;
+                
+                 $scope.setFile = function (element) {
+                    $scope.$apply(function ($scope) {
+                        $scope.theFile = element.files[0];
+
+
+                        $scope.subida = "http://127.0.0.1:8081/images/" + $scope.theFile.name;
+                        reinols = $scope.subida;
+
+                    });
+                };
+                
+                
                 serverCallService.getMeta($scope.ob).then(function (response) {
                     if (response.status == 200) {
                         if (response.data.status == 200) {
@@ -67,6 +81,7 @@ moduloImagen.controller('ImagenNew1Controller',
                 });
                 //--
                 $scope.save = function () {
+                    $scope.bean.imagen = reinols;
                     var jsonToSend = {json: JSON.stringify(toolService.array_identificarArray($scope.bean))};
                     serverCallService.set($scope.ob, jsonToSend).then(function (response) {
                         if (response.status == 200) {
