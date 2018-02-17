@@ -40,6 +40,21 @@ moduloImagen.controller('ImagenEdit1Controller',
                 //---
                 $scope.id = $routeParams.id;
                 //---
+                var reinols;
+                
+                 $scope.setFile = function (element) {
+                    $scope.$apply(function ($scope) {
+                        $scope.theFile = element.files[0];
+
+
+                        $scope.subida = "http://127.0.0.1:8081/images/" + $scope.theFile.name;
+                        reinols = $scope.subida;
+
+                    });
+                };
+                
+                
+                
                 serverCallService.getOne($scope.ob, $scope.id).then(function (response) {
                     if (response.status == 200) {
                         if (response.data.status == 200) {
@@ -57,6 +72,7 @@ moduloImagen.controller('ImagenEdit1Controller',
                     $scope.status = "Error en la recepción de datos del servidor";
                 });
                 $scope.save = function () {
+                    $scope.bean.imagen = reinols;
                     var jsonToSend = {json: JSON.stringify(toolService.array_identificarArray($scope.bean))};
                     serverCallService.set($scope.ob, jsonToSend).then(function (response) {
                         if (response.status == 200) {
