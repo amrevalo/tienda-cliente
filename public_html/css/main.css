@@ -21,6 +21,13 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 */
 @charset "UTF-8";
 
+
+#tamimg {
+    max-width: 10%;
+    max-height: 10%;
+}
+
+
 a,
 a label {
     cursor: pointer;

@@ -105,7 +105,7 @@
                                                              (outerForm[oMetap.Name].$error.required && !outerForm[oMetap.Name].$pristine)}">
                                     <label class="control-label col-sm-2" for="{{oMetap.Name}}">
                                         <span ng-if="oMetap.IsRequired">*</span>
-                                        {{oMetap.LongName}}
+                                        Ruta de imagen
                                     </label>
                                     <div class="control col-md-{{oMetap.Width}}">
                                         <input type="text"
@@ -118,7 +118,7 @@
                                                maxlength="{{oMetap.MaxLength}}"
                                                ng-required="oMetap.IsRequired"
                                                ng-value="subida"
-                                               
+                                               disabled
                                                />
                                         
                                         
