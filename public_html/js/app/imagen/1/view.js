@@ -28,7 +28,7 @@
 'use strict';
 moduloImagen.controller('ImagenView1Controller',
         ['$scope', '$routeParams', 'serverCallService', '$location', 'sessionService', 'constantService',
-            function ($scope, $routeParams, serverCallService, $location, sessionService, constantService) {
+            function ($scope, $routeParams, serverCallService, $location, sessionService, constantService) {       
                 $scope.ob = "imagen";
                 $scope.op = "view";
                 $scope.profile = 1;
@@ -60,7 +60,7 @@ moduloImagen.controller('ImagenView1Controller',
                 });
                 $scope.back = function () {
                     window.history.back();
-                };
+                };                                
                 $scope.close = function () {
                     $location.path('/home');
                 };

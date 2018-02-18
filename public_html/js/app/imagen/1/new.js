@@ -29,7 +29,7 @@
 
 moduloImagen.controller('ImagenNew1Controller',
         ['$scope', '$routeParams', '$location', 'serverCallService', '$filter', '$uibModal', 'sessionService', '$route', 'toolService', 'constantService',
-            function ($scope, $routeParams, $location, serverCallService, $filter, $uibModal, sessionService, $route, toolService, constantService) {
+            function ($scope, $routeParams, $location, serverCallService, $filter, $uibModal, sessionService, $route, toolService, constantService) {                
                 $scope.ob = "imagen";
                 $scope.op = "new";
                 $scope.profile = 1;
@@ -101,7 +101,7 @@ moduloImagen.controller('ImagenNew1Controller',
                     ;
                 };
                 $scope.back = function () {
-                    window.history.back();
+                    window.history.back();                    
                 };
                 $scope.close = function () {
                     $location.path('/home');
