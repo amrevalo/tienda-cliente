@@ -169,8 +169,14 @@ moduloServicios.factory('toolService', ['$filter', function ($filter) {
             },
             
             
+            //alberto insert to carrito
+            getUrlFromCarrito: function (ob, op) {
+                var ruta = ob + '/' + op;
+                return ruta;
+            },
             
-            getUrlFromParams: function (ob, op, numpage, rpp, ufilter, uorder) {
+            
+            getUrlFromPagetUrlFromParamsrams: function (ob, op, numpage, rpp, ufilter, uorder) {
                 var ruta = ob + '/' + op + '/' + numpage + '/' + rpp;
                 ruta += "/" + this.getParamString(ufilter);
                 ruta += "/" + this.getParamString(uorder);

@@ -53,6 +53,12 @@ moduloServicios.factory('serverCallService',
                             }
                         }
                     },
+                    
+                    //alberto insert to carrito
+                    carritoList: function (strClass) {
+                      return $http.get(constantService.getAppUrl() + '?ob=' + strClass + '&op=list');  
+                    },
+                    
                     getOne: function (strClass, id) {
                         return $http.get(constantService.getAppUrl() + '?ob=' + strClass + '&op=get&id=' + id, 'GET', '');
                     },

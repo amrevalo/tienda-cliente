@@ -80,6 +80,8 @@ trolleyes.config(['$routeProvider', function ($routeProvider) {
         $routeProvider.when('/autor/1/edit/:id', {templateUrl: 'js/system/shared/app/newedit.html', controller: 'AutorEdit1Controller', resolve: {auth: authenticationAdministratorPromise}});
         $routeProvider.when('/autor/1/remove/:id', {templateUrl: 'js/system/shared/app/remove.html', controller: 'AutorRemove1Controller', resolve: {auth: authenticationAdministratorPromise}});
         $routeProvider.when('/autor/1/plist/:page?/:rpp?', {templateUrl: 'js/system/shared/app/plist.html', controller: 'AutorPList1Controller', resolve: {auth: authenticationAdministratorPromise}});
+        
+        $routeProvider.when('/carrito/1/plist/:page?/:rpp?', {templateUrl: 'js/system/shared/app/carritolist.html', controller: 'CarritoPList1Controller', resolve: {auth: authenticationAdministratorPromise}});
        
         //perfil 1 tienda CLIENTE
         $routeProvider.when('/cliente/1/view/:id', {templateUrl: 'js/system/shared/app/view.html', controller: 'ClienteView1Controller', resolve: {auth: authenticationAdministratorPromise}});

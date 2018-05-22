@@ -45,6 +45,7 @@ var trolleyes = angular.module('myApp', [
     'facturaControllers',
     'generoControllers',
     'imagenControllers',
+    'carritoControllers',
     'lineapedidoControllers',
     'prodxproveedorControllers',
     'proveedorControllers',
@@ -76,6 +77,7 @@ var moduloImagen = angular.module('imagenControllers', []);
 var moduloLineapedido = angular.module('lineapedidoControllers', []);
 var moduloProdxproveedor = angular.module('prodxproveedorControllers', []);
 var moduloProveedor = angular.module('proveedorControllers', []);
+var moduloCarrito = angular.module('carritoControllers', []);
 var moduloTipoproducto = angular.module('tipoproductoControllers', []);
 //------------
 
