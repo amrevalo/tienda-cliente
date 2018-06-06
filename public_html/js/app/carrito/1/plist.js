@@ -59,7 +59,14 @@ moduloCarrito.controller('CarritoPList1Controller',
 //                        }
 //                    }).then(function (response) {
                         if (response.data.status == 200) {
-                            //response.data.json["0"].obj_producto.metaObject;                          
+                            //response.data.json["0"].obj_producto.metaObject;
+                            $("#carritovacio").hide();
+                            if (response.data.json.length == 0){
+                                $("#carritovacio").show();
+                                $("#carritoTable").hide();
+                                $("#vaciar").hide();
+                                $("#comprar").hide();
+                            }
                             $scope.page = response.data.json;
                             
                         } else {

@@ -114,6 +114,11 @@ moduloServicios.factory('serverCallService',
                     getMeta: function (strClass) {
                         return $http.get(constantService.getAppUrl() + '?ob=' + strClass + '&op=getmetadata', 'GET', '');
                     },
+                    
+                    removeproducto: function (strClass, id) {
+                        return $http.get(constantService.getAppUrl() + '?ob=' + strClass + '&op=remove&id=' + id, 'GET', '');
+                    },
+                    
                     getSession: function (strClass) {
                         return $http.get(constantService.getAppUrl() + '?ob=' + strClass + '&op=getsessionstatus', 'GET', '');
                     }
