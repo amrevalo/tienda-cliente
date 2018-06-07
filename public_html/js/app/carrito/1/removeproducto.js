@@ -16,7 +16,7 @@ moduloCarrito.controller('CarritoRemoveController',
                 //$scope.remove = function () {
                     serverCallService.removeproducto($scope.ob, $scope.id_producto).then(function (response) {
                         if (response.status == 200) {
-                            $scope.status = "El producto se ha quitado del carro.";
+                            $scope.status = "El producto se ha eliminado correctamente del carro.";
                         } else {
                             $scope.status = "Error 2: en la recepción de datos del servidor";
                         }
