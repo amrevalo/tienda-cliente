@@ -12,10 +12,18 @@ and open the template in the editor.-->
                 <div class="panel-heading">
                     <h1 id="broth_title" style="font-family:Oswald , serif;" align="center" >Carrito de la compra</h1>
                 </div>
-                    <div id="carritovacio" class="panel-body" > Tu carrito esta vacio</div>
-                    <div class="panel panel-default">
+                
+                <div class="panel panel-default" id="carritovacio">
                     <div class="row">
                         <div class="col-xs-12 ng-scope">
+                
+                            <div id="carritovacio" class="panel-body" ><h3> Tu carrito esta vacio</h3></div>
+                
+                </div></div></div>
+                
+                    <div  class="panel panel-default carritopanel">
+                    <div class="row carritopanel">
+                        <div class="col-xs-12 ng-scope carritopanel">
                             </br></br>
                                 <table align="center" id="carritoTable" class="table  table-responsive table-bordered table-hover table-striped table-condensed dataTable no-footer">
                                 <thead></thead>
@@ -26,6 +34,7 @@ and open the template in the editor.-->
                                 <th>Producto</th>            
                                 <th>Precio</th>                
                                 <th>Cantidad</th>
+                                <th>total precio producto</th>
                                 <th>Opciones</th>
                                 <tr ng-repeat="oBean in page">
 
@@ -35,6 +44,7 @@ and open the template in the editor.-->
                                     <td><div><b>{{oBean.obj_producto.data.precio}}€</b></div></td>
 <!--                                    <td><div><img src="{{oBean.obj_producto.data.imagen}}" alt width="150" height="75"></img></div></td>-->
                                     <td><div><b>{{oBean.cantidad}}</b></div></td>
+                                    <td><div><b>{{oBean.obj_producto.data.precio * oBean.cantidad}}€</b></div></td>
                                     
                                     <td ng-init="setShowRemove(true)" ng-repeat="oMetap in metap" class="text-right">
                                         <div class="text-center">{{oBean[oMetap.descripcion]}}</div>
@@ -62,12 +72,13 @@ and open the template in the editor.-->
                     </div>
                     </div>
                         </div>
-                        <a class="glyphicon glyphicon-trash btn btn-danger " id="vaciar" style="float: right " href="{{ob}}/empty/"> Vaciar</a>
-                        <a class="glyphicon glyphicon-shopping-cart btn btn-primary" id="comprar" style="float: right " href="{{ob}}/buy/"> Comprar</a>
+                        <a id="botonvaciar" class="glyphicon glyphicon-trash btn btn-danger " id="vaciar" style="float: right " href="{{ob}}/empty/"> Vaciar</a>
+                        <a id="botoncomprar" class="glyphicon glyphicon-shopping-cart btn btn-primary" id="comprar" style="float: right " href="{{ob}}/buy/"> Comprar</a>
 
                     </div>
 <!--                </div>-->
             </div>
         </div>
+</br>
         <div class="panel-footer" style="font-family: Questrial, serif;" ng-include="'js/system/include/footer.html'"></div>
   

@@ -64,6 +64,7 @@ moduloCarrito.controller('CarritoPList1Controller',
                             if (response.data.json.length == 0){
                                 $("#carritovacio").show();
                                 $("#carritoTable").hide();
+                                $(".carritopanel").hide();
                                 $("#vaciar").hide();
                                 $("#comprar").hide();
                             }
