@@ -35,16 +35,12 @@ moduloCarrito.controller('CarritoPList1Controller',
                 //---
                 $scope.url = $scope.ob + '/' + $scope.profile + '/' + $scope.op;
                 //----
-            //$scope.numpage = toolService.checkDefault(1, $routeParams.page);
-            //$scope.rpp = toolService.checkDefault(10, $routeParams.rpp);
-//                $scope.neighbourhood = constantService.getGlobalNeighbourhood();
-//                //---
-//            $scope.orderParams = toolService.checkEmptyString($routeParams.order);
-//            $scope.filterParams = toolService.checkEmptyString($routeParams.filter);
-                //---
+
                 $scope.status = null;
                 $scope.debugging = constantService.debugging();
                 //---
+                $scope.clienteinputvalue = 6;
+
                 function getDataFromServer() {
                     serverCallService.carritoList($scope.ob).then(function (response) {
 //                        if (response.status == 200) {
@@ -65,6 +61,8 @@ moduloCarrito.controller('CarritoPList1Controller',
                                 $("#carritovacio").show();
                                 $("#carritoTable").hide();
                                 $(".carritopanel").hide();
+                                $("#clienteinput").hide();
+                                $("#labelcliente").hide();
                                 $("#vaciar").hide();
                                 $("#comprar").hide();
                             }
@@ -75,7 +73,7 @@ moduloCarrito.controller('CarritoPList1Controller',
                         }
                     }).catch(function (data) {
                         $scope.status = "Error en la recepción de datos del servidor";
-                    });
+                    });                           
                 }
                 $scope.doorder = function (orderField, ascDesc) {
                     $location.url($scope.url + '/' + $scope.numpage + '/' + $scope.rpp).search('filter', $scope.filterParams).search('order', orderField + ',' + ascDesc);
@@ -89,7 +87,7 @@ moduloCarrito.controller('CarritoPList1Controller',
                 };
                 $scope.setShowRemove = function (show) {
                     $scope.showRemove = show;
-                };
+                };  
                 getDataFromServer();
             }
         ]);

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<menu></menu>
+<div id="wrapper" ng-cloak>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3" >
+            </div>
+            <div class="col-lg-6" >
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <header ob="ob" title="'Compra de ' + objectService.getName(ob)"></header>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row-fluid" ng-if="status">
+                            <div class="col-xs-12">
+                                <div class="alert alert-success" role="alert">
+                                    <br>
+                                    <h3 class="bg-success">{{status}}</h3>
+                                    <br>
+                                    <a class="btn btn-default" ng-click="back()">Volver</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div align="center" class="row-fluid" ng-if="!status">
+                            <div class="span6 offset3">
+                             
+                                <div class="control-group text-center">
+                                    <div class="controls">
+                                                               
+                        
+                                        <div><h3>Indica el numero de cliente <input  id="clienteinput" type="text" size="10px" ng-model="clienteinputvalue"></br>  <h3></div>
+                                                                                          <a class="btn btn-primary" ng-click="buy(clienteinputvalue)">realizar compra</a>
+                                        <a class="btn btn-default" ng-click="back()">volver</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-footer" style="font-family: Questrial, serif;" ng-include="'js/system/include/footer.html'"></div>
+                </div>
+            </div>
+            <div class="col-lg-3" ></div>
+        </div>
+    </div>
+</div>

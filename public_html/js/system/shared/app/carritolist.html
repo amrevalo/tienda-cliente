@@ -29,18 +29,18 @@ and open the template in the editor.-->
                                 <thead></thead>
                                 <tbody>
                                
+                                <th>Producto</th>    
                                 <th>Tipo de Producto</th>
-                                <th>Autor</th>
-                                <th>Producto</th>            
+                                <th>Autor</th>                                      
                                 <th>Precio</th>                
                                 <th>Cantidad</th>
                                 <th>total precio producto</th>
                                 <th>Opciones</th>
                                 <tr ng-repeat="oBean in page">
 
+                                    <td><div><b>{{oBean.obj_producto.data.descripcion}}</b></div></td>
                                     <td><div><b>{{oBean.obj_producto.data.obj_tipoproducto.data.descripcion}}</b></div></td>
-                                    <td><div><b>{{oBean.obj_producto.data.obj_autor.data.descripcion}}</b></div></td>
-                                    <td><div><b>{{oBean.obj_producto.data.descripcion}}</b></div></td>                                   
+                                    <td><div><b>{{oBean.obj_producto.data.obj_autor.data.descripcion}}</b></div></td>                                                                       
                                     <td><div><b>{{oBean.obj_producto.data.precio}}€</b></div></td>
 <!--                                    <td><div><img src="{{oBean.obj_producto.data.imagen}}" alt width="150" height="75"></img></div></td>-->
                                     <td><div><b>{{oBean.cantidad}}</b></div></td>
@@ -72,9 +72,9 @@ and open the template in the editor.-->
                     </div>
                     </div>
                         </div>
-                        <a id="botonvaciar" class="glyphicon glyphicon-trash btn btn-danger " id="vaciar" style="float: right " href="{{ob}}/empty/"> Vaciar</a>
-                        <a id="botoncomprar" class="glyphicon glyphicon-shopping-cart btn btn-primary" id="comprar" style="float: right " href="{{ob}}/buy/"> Comprar</a>
-
+                        <a  class="glyphicon glyphicon-trash btn btn-danger " id="vaciar" style="float: right " href="{{ob}}/empty/"> Vaciar</a>
+                        <a  class="glyphicon glyphicon-shopping-cart btn btn-primary" id="comprar" style="float: right " href="{{ob}}/buy"> Comprar</a>                        
+                        
                     </div>
 <!--                </div>-->
             </div>
