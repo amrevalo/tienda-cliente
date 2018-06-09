@@ -246,6 +246,12 @@
                                                                 <a ng-if="showRemove" class="btn btn-default btn-xs" title="Remove" href="{{ob}}/{{profile}}/remove/{{oBean.id}}">
                                                                     <span class="glyphicon glyphicon-remove"></span>
                                                                 </a>
+                                                                
+                                                                <a  ng-if="ob == 'producto'" class="btn btn-default btn-xs" title="add" href="carrito/add/{{oBean.id}}">
+                                                                    <span class="glyphicon glyphicon-shopping-cart"></span>                                                              
+                                                                </a>
+                                                                
+                                                               
                                                             </div>
                                                         </div>
                                                     </td>
@@ -258,6 +264,11 @@
                                                                 <a ng-if="showEdit(oBean); idseve"  class="btn btn-default btn-xs" title="Edit" href="{{ob}}/{{profile}}/edit/{{oBean.id}}">
                                                                     <span class="glyphicon glyphicon-pencil"></span>
                                                                 </a>
+                                                                
+                                                                <a  ng-if="ob == 'producto'" class="btn btn-default btn-xs" title="add" href="carrito/add/{{oBean.id}}">
+                                                                    <span class="glyphicon glyphicon-shopping-cart"></span>
+                                                                </a>
+                                                                
                                                             </div>
                                                         </div>
                                                     </td>
@@ -267,6 +278,11 @@
                                                                 <a class="btn btn-default btn-xs" title="View" href="{{ob}}/{{profile}}/view/{{oBean.id}}">
                                                                     <span class="glyphicon glyphicon-eye-open"></span>
                                                                 </a>
+                                                                
+                                                                <a  ng-if="ob == 'producto'" class="btn btn-default btn-xs" title="add" href="carrito/add/{{oBean.id}}">
+                                                                    <span class="glyphicon glyphicon-shopping-cart"></span>
+                                                                </a>
+                                                                
                                                             </div>
                                                         </div>
                                                     </td>
@@ -283,9 +299,14 @@
                                                                 <a ng-if="showRemove" class="btn btn-default btn-xs" title="Remove" href="{{ob}}/{{profile}}/remove/{{oBean.id}}">
                                                                     <span class="glyphicon glyphicon-remove"></span>
                                                                 </a>
+                                                                
+                                                                <a  ng-if="ob == 'producto'" class="btn btn-default btn-xs" title="add" href="carrito/add/{{oBean.id}}">
+                                                                    <span class="glyphicon glyphicon-shopping-cart"></span>
+                                                                </a>
+                                                              
                                                             </div>
                                                         </div>
-                                                    </td>
+                                                    </td>                                                   
                                                 </tr>
                                             </tbody>
                                         </table>

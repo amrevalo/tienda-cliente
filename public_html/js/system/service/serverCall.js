@@ -127,6 +127,10 @@ moduloServicios.factory('serverCallService',
                         return $http.get(constantService.getAppUrl() + '?ob=' + strObject + '&op=buy&cliente='+cliente,  'GET', '');
                     },
                     
+                    add: function (strObject, cantidad, idForeign) {
+                        return $http.get(constantService.getAppUrl() + '?ob=' + strObject + '&op=add' + '&id=' + idForeign+ '&cantidad=' +cantidad, 'GET', '');
+                    },
+                    
                     getSession: function (strClass) {
                         return $http.get(constantService.getAppUrl() + '?ob=' + strClass + '&op=getsessionstatus', 'GET', '');
                     }

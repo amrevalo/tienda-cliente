@@ -82,6 +82,10 @@ moduloProducto.controller('ProductoPList1Controller',
                 $scope.setShowRemove = function (show) {
                     $scope.showRemove = show;
                 };
+                $scope.setShowAdd = function (show) {
+                    $scope.showAdd = show;
+                };
+                
                 getDataFromServer();
             }
         ]);
